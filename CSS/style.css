@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #FFFF;
+    font-family: 'Inter';
+    font-weight: 400;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.nav{
+    margin-top: 25px;
+}
+
+.nav-list{
+    background-color: #F0F0F0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    border-radius: 50px;
+    padding: 0.5em;
+}
+
+.nav-item{
+    text-decoration: none;
+    color: #000000;
+    padding: 0.75em;
+    text-align: center;
+}
+
+.nav-item:hover{
+    background-color: white;
+    border-radius: 20px;
+}
+
+.hero{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero_text{
+    margin-top: 1.6em;
+    text-align: center;
+    font-weight: 600;
+    font-size: 3.5rem; /* augmente */
+    line-height: 1.2;
+    max-width: 800px;
+}
+
+.tags{
+    display: flex;
+    justify-content: center;
+}
+
+.tags button{
+    border: none;
+    margin: 12px 16px;
+    padding: 0.4em 1.2em;
+    font-size: 0.9rem;
+    font-weight: 500;
+    background-color: #F5F5F5;
+    border-radius: 9999px; /* fully rounded */
+    color: #333;
+}
+
+button:hover{
+    opacity: .75;
+}
+
+
+.grid-container-parent{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 48px; /* comme sur le mockup */
+    width: 1080px; /* largeur fixe ou max-width */
+    margin: 4rem auto;
+}
+
+.grid-container-child {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.08);
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.grid-container-child.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cta{
+    text-align: center;
+    font-size: 2rem;
+    line-height: 0.75;
+    font-weight: 500;
+}
+
+.cta p:hover{
+    cursor: pointer;
+    color: gray;
+}
+
+.page-footer {
+    display: flex;
+    gap: 15rem;
+    padding: 1rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+    margin-top: 5rem;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+    padding: 1rem;
+}
+
+.logo{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+
+.footer-links a:hover {
+    opacity: 0.6;
+    transition: opacity 0.2s ease;
+}
+
+@media(max-width: 768px){
+
+    .nav-list{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        align-items: center;
+        border-radius: 25px;
+        width: 100%;
+    }
+
+    .hero_text p{
+        font-size: 2rem;
+        text-align: center;
+        padding: 0 1em;
+    }
+
+    .tags {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 1em;
+    }
+
+    .grid-container-parent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 1em;
+    width: 80%;
+  }
+
+
+  .cta {
+    text-align: center;
+    font-size: 1.75em;
+    padding: 1.5em 1em;
+  }
+
+  .page-footer {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+
+}

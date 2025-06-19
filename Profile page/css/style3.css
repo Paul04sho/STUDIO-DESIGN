@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    background-color:beige;
+    width: 400px;
+    border-radius: 12px;
+    padding: 0.5em 0.8em 0.75em 1em;
+    text-align: center;
+}
+
+img{
+    width: 25%;
+    border-radius: 100%;
+}
+
+/* Style général des liens */
+.social-link {
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  background-color: bisque;
+  padding: 0.6em 1em;
+  margin-bottom: 1em;
+  display: inline-flex;         /* permet d’aligner icône + texte */
+  align-items: center;         /* aligne verticalement */
+  border-radius: 5px;
+  font-size: 1em;
+  gap: 8px;                    /* espace entre icône et texte */
+  transition: background 0.3s;
+
+
+  display: flex;              
+  justify-content: center;  
+  align-items: center;
+  max-width: 1200px;
+}
+
+.social-link:hover {
+  background-color: peachpuff;
+  cursor: pointer;
+}
+
+.social-link i {
+  font-size: 1.1em;
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    width: 90%;
+    padding: 1.5em 1em;
+  }
+
+  .social-link {
+    font-size: 0.95em;
+    padding: 0.5em 0.75em;
+  }
+
+  .social-link i {
+    font-size: 1em;
+  }
+}
+
+
+
